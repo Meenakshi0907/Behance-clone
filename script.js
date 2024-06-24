@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sort thumbnails based on the selected option
         let sortedThumbnails;
         if (sortBy === 'Recommended') {
-            sortedThumbnails = thumbnails1;// Recommended is default, no sorting needed
+            sortedThumbnails = thumbnails1;// Recommended is default
         } else if (sortBy === 'Most Liked') {
             sortedThumbnails = thumbnails.sort((a, b) => {
                 const likesA = parseInt(a.querySelector('.likes').textContent.trim());
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
+// Redirect to Log in page
 function inputclick(){
     window.location.replace("login.html");
     return false;
