@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //Search bar 
 document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById('searchInput');
+    const searchByImageBtn = document.getElementById('searchByImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const suggestions = document.getElementById('suggestions');
 
@@ -67,12 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
         showSuggestions(searchInput.value);
     });
 
+    searchByImageBtn.addEventListener('click', function() {
+        showImageSuggestions(searchInput.value);
+    });
+
     function showSuggestions(value) {
         const searchInput = value.toLowerCase();
         const images = Array.from(document.getElementsByClassName('thumbnail'));
         const titles = images.map(image => image.querySelector('.thumbnail-info h4').innerText.toLowerCase());
         suggestions.innerHTML = '';
-        
+
         if (searchInput) {
             const filteredTitles = titles.filter(title => title.includes(searchInput));
             filteredTitles.forEach(title => {
@@ -101,7 +106,30 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
+
+    function showImageSuggestions(value) {
+        const searchInput = value.toLowerCase();
+        const images = Array.from(document.getElementsByClassName('thumbnail'));
+        suggestions.innerHTML = '';
+
+        if (searchInput) {
+            images.forEach(image => {
+                const imageTitle = image.querySelector('.thumbnail-info h4').innerText.toLowerCase();
+                if (imageTitle.includes(searchInput)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        } else {
+            // If the search input is empty, display all images
+            images.forEach(image => {
+                image.style.display = 'block';
+            });
+        }
+    }
 });
+
 
 function inputclick(){
     window.location.replace("login.html");
