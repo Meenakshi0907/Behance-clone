@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behance Boop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="./script.js"></script>
+
+</head>
+<body>
+    <header class="header_section">
+        <div style="min-width: 100%" class="container">
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <div class="logo">Be̅hance</div>
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="#" class="active dropbtn">Explore</a> <i class='fa fa-chevron-down' style='font-size:15px'></i>
+                            <div class="dropdown-content">
+                                <a href="#">Search & Explore</a>
+                                <a href="#">Curated Galleries</a>
+                                <hr>
+                                <a class="p" href="#">Best of Behance</a>
+                                <a href="#">Graphic Design</a>
+                                <a href="#">Illustration</a>
+                                <a href="#">Photography</a>
+                                <a href="#">UI/UX</a>
+                                <a href="#">3D Art</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="line">Assets</a></li>
+                        <li><a href="#" class="line">Jobs</a></li>
+                        <li><span href="#" class="line">Behance <span class="line pro-button">PRO</span></span></li>
+                        <!--<div class="pro-button">PRO</div> -->
+
+                        <li><a href="#" class="line">Hire Freelancers</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <i style="font-size:16px" class="fa">&#xf0f3;</i>
+                    <button class="sharebutton">Share Your Work</button>
+                    <button class="logout" onclick="outputclick()">Log Out</button>
+                    <script src="./script.js"></script>
+                    <div class="adobe-logo"><img src="./img/adobelogo.png" width="20" height="20"> Adobe</div>
+                </div>
+            </nav>
+    </header>
+    <br>
+    </div>
+    <!--Search Bar-->
+    <div class="header-container" style="margin-left: 15px; margin-right: 15px;">
+        <div class="filter-button"> <img class="filter-img" src="img/filtericon.png" width="20" height="20">
+            Filter
+        </div>
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search the creative world at work" class="search-value" id="searchInput"> <button class="search-by-image"><i class="fa fa-image"></i> Search by Image</button>
+        </div>
+        <div id="suggestions" class="result-box">
+        </div>
+        <div class="sort">
+            <select>
+                <option>Recommended</option>
+                <option>Most Liked</option>
+                <option>Most Viewed</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+<!--THUMBNAIL CREATION-->
+    <div class="thumbnail-header">
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic1.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Landscapes Collection No.4</h4>
+                <p>Bo Wen HUANG <span class="pro-badge">PRO</span></p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 63
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 262
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic2.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Spider man and Gwen Stacy</h4>
+                <p>SpiderMan Multiverse</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 250
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 600
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic3.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Tangeled Floating Light</h4>
+                <p>Disney</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 150
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 250
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic4.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Krishna and his melody</h4>
+                <p>Mahabaratha</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 100
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 350
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic5.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Gojo satoru</h4>
+                <p>Jujusu Kaisan </p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 120
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 500
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic6.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Calico Cat</h4>
+                <p>Cats World</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 350
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 450
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic7.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Glass Hangings</h4>
+                <p>Interior Design</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 50
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 370
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic8.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Attack On Titan Character</h4>
+                <p>Attack On Titan</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 300
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 340
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic9.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Mikasa's Brave Decision</h4>
+                <p>Attack On Titan</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 450
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 500
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic10.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>World Map</h4>
+                <p>WHO</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 100
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 200
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic11.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Students When Training</h4>
+                <p>Saveetha Engineering College</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 850
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 900
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnail-img">
+            <img src="img/pic12.jpg" alt="">
+            </div>
+            <div class="thumbnail-info">
+                <h4>Ratatouille</h4>
+                <p>Disney</p>
+                <div class="stats">
+                    <div class="likes">
+                        <i class="fa fa-thumbs-up"></i> 200
+                    </div>
+                    <div class="views">
+                        <i class="fa fa-eye"></i> 250
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Modal -->
+    <div id="popup-modal" class="popup-modal">
+        <span class="close-btn">&times;</span>
+        <img class="popup-modal-content" id="popup-img">
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+
+</html>
+<script>
+    function outputclick(){
+    window.location.replace("login.html");
+    return false;
+}
+</script>
